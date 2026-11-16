@@ -1,0 +1,68 @@
+.theme-toggle {
+  flex: 0 0 auto;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--paper);
+  color: var(--ink);
+  font: inherit;
+  font-size: 11px;
+}
+@media (max-width: 480px) {
+  header nav a[href="#workspace"] { display: none; }
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --paper: #faf7f8;
+  --ink: #251921;
+  --muted: #65535e;
+  --accent: #b22040;
+  --line: #e5d3da;
+  --surface: #fff;
+  --tint: #f9e8ee;
+  --strong-tint: #f1d4df;
+}
+[data-theme="light"] :is(header,.card,textarea,select,.view-switch,.live-transcript,.presentation-dialog,.present-turn) {
+  background: var(--surface);
+  color: var(--ink);
+  border-color: var(--line);
+}
+[data-theme="light"] :is(.dropzone,.secondary,.signal-preview span,.limit,.next-step,.safety-guide,.tip-number,.live-banner,.live-warning,.timestamp,.personal-plan,.situation-options label,.highlight-detail,.classification,.warning-feedback,.feedback-votes button,.present-score,.present-warning,.legal-summary,.step-rail button,.upload-icon,.file-icon,canvas,.samples button:hover) {
+  background: var(--tint);
+  color: #74233e;
+  border-color: #dcb4c3;
+}
+[data-theme="light"] :is(.dropzone.drag,.step-rail button[aria-current=step],.view-switch button[aria-pressed=true],.situation-options label:has(input:checked),.feedback-votes button[aria-pressed=true],.timestamp:hover) {
+  background: var(--strong-tint);
+  color: #711735;
+  border-color: #b65373;
+}
+[data-theme="light"] .pyramid-example {
+  background: #fff1db !important;
+  color: #754714 !important;
+}
+[data-theme="light"] .tone { --phrase: #833d29; --phrase-bg: #ffe5d9; }
+[data-theme="light"] .requests { --phrase: #782044; --phrase-bg: #f9dce8; }
+[data-theme="light"] .reliability { --phrase: #523482; --phrase-bg: #eee5ff; }
+[data-theme="light"] .scheme { --phrase: #764711; --phrase-bg: #ffebcc; }
+[data-theme="light"] :is(footer,footer .footer-legal a,.mini-label,.samples button,.samples small,.dropzone small,.empty-bottom,.view-switch button,.speaker-row-top label,.speaker-row.recipient p,.recipient-note,.quality-metrics,.quality-issue p,.scheme-card p,.scheme-cues,.warning-feedback summary,.warning-feedback .feedback-status,.plan-note,.plan-detail,.situation-options legend,.present-footer,.presentation-intro p,.present-warning p,.present-score span,.legal-intro > p,.legal-summary p,.legal-content p),
+[data-theme="light"] textarea::placeholder,
+[data-theme="light"] :is(#presentModeNote,#presentClock,#presentQuality,#liveState) {
+  color: var(--muted);
+}
+[data-theme="light"] .view-switch button[aria-pressed=true] { color: #711735; }
+[data-theme="light"] :is(.scheme-card h4,.scheme-cues strong,.highlight-detail strong,.quality-panel h3,.quality-issue strong,.personal-plan h3,.plan-step strong,.plan-progress,.safety-guide h3,.safety-guide a,.action-heading .mini-label,.action-tips strong,.recovery summary,.recovery a,.guidance-source,.present-score strong,.present-warning h3,.legal-content h2,.legal-content strong,.legal-content a,.legal-summary strong,.status.error) {
+  color: #922343;
+}
+[data-theme="light"] :is(.next-step > p,.action-tips p,.recovery ul,.safety-guide p,.warning-feedback > span,.live-banner > span:last-child,.evidence q) {
+  color: var(--ink);
+}
+[data-theme="light"] :is(.action-tips li,.recovery,.plan-step,.speaker-row,.scheme-card,.presentation-top,.present-controls,.present-footer,footer .footer-legal) {
+  border-color: var(--line);
+}
+[data-theme="light"] .legal-date { color: var(--muted) !important; }
+[data-theme="light"] .score-ring {
+  background: radial-gradient(closest-side,var(--surface) 83%,transparent 85%),
+    conic-gradient(var(--risk-color,var(--accent)) var(--angle),var(--line) 0);
+}
